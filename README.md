@@ -52,7 +52,7 @@ __MVVM__ - MVVM stands for Model, View, ViewModel. MVVM is one of the architectu
 <li><a href="https://developer.android.com/kotlin/coroutines" target="_blank">Coroutines</a></li>
 <li><a href="https://material.io/develop/android/docs/getting-started/" target="_blank">Material library</a></li>
 <li><a href="https://developer.android.com/guide/navigation/navigation-getting-started" target="_blank">Navigation Component</a></li>
-<li><a href="https://aws.amazon.com/amplify/studio/" target="_blank">Aws Amplify</a></li>
+<li><a href="https://aws.amazon.com/amplify/studio/" target="_blank">AWS Amplify</a></li>
    
 </ul>
 
