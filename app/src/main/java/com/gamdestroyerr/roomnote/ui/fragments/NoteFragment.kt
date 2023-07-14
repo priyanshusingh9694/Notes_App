@@ -5,11 +5,13 @@ import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import android.content.res.Configuration.ORIENTATION_PORTRAIT
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -117,9 +119,9 @@ class NoteFragment : Fragment(R.layout.fragment_note) {
                     val text = s.toString()
                     val query = "%$text%"
                     if (query.isNotEmpty()) {
-                        noteActivityViewModel.searchNote(query).observe(viewLifecycleOwner) {
+                       /* noteActivityViewModel.searchNote(query).observe(viewLifecycleOwner) {
                             rvAdapter.submitList(it)
-                        }
+                        }*/
                     } else {
                         observerDataChanges()
                     }
@@ -207,7 +209,7 @@ class NoteFragment : Fragment(R.layout.fragment_note) {
 
     private fun observerDataChanges() {
         noteActivityViewModel.getAllNotes().observe(viewLifecycleOwner) { list ->
-            noteBinding.noData.isVisible = list.isEmpty()
+            //noteBinding.noData.isVisible = rvAdapter.itemCount == 0
             rvAdapter.submitList(list)
         }
     }
@@ -243,7 +245,7 @@ class NoteFragment : Fragment(R.layout.fragment_note) {
                         super.onDismissed(transientBottomBar, event)
                     }
 
-                    override fun onShown(transientBottomBar: Snackbar?) {
+                   /* override fun onShown(transientBottomBar: Snackbar?) {
                         transientBottomBar?.setAction("UNDO") {
                             noteActivityViewModel.saveNote(note)
                             noteBinding.noData.isVisible = false
@@ -251,7 +253,7 @@ class NoteFragment : Fragment(R.layout.fragment_note) {
 
                         }
                         super.onShown(transientBottomBar)
-                    }
+                    }*/
                 }).apply {
                     animationMode = Snackbar.ANIMATION_MODE_FADE
                     setAnchorView(R.id.addNoteFab)

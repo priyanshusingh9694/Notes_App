@@ -23,10 +23,11 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
-        <activity android:name=".ui.activity.NoteActivity" />
+        <activity android:name="com.gamdestroyerr.roomnote.ui.activity.NoteActivity" />
         <activity
-            android:name=".ui.activity.SplashActivity"
-            android:theme="@style/splash">
+            android:name="com.gamdestroyerr.roomnote.ui.activity.SplashActivity"
+            android:theme="@style/splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -13,4 +13,5 @@ data class Note(
     val date: String,
     val color: Int = -1,
     val imagePath: String?,
+    val newId : String?,
 ) : Serializable

@@ -62,6 +62,10 @@ class RvNotesAdapter : androidx.recyclerview.widget.ListAdapter<
         )
     }
 
+    override fun getItemCount(): Int {
+        return super.getItemCount()
+    }
+
     override fun onBindViewHolder(holder: NotesViewHolder, position: Int) {
 
         getItem(position).let { note ->

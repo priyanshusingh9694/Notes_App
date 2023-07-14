@@ -248,7 +248,7 @@ class NoteContentFragment : Fragment(R.layout.fragment_note_content) {
                             contentBinding.etNoteContent.getMD(),
                             currentDate,
                             color,
-                            noteActivityViewModel.setImagePath(),
+                            noteActivityViewModel.setImagePath(),""
                         )
                     )
                     result = "Note Saved"
@@ -279,7 +279,7 @@ class NoteContentFragment : Fragment(R.layout.fragment_note_content) {
                     contentBinding.etNoteContent.getMD(),
                     currentDate,
                     color,
-                    noteActivityViewModel.setImagePath(),
+                    noteActivityViewModel.setImagePath(), note!!.newId
                 )
             )
         }
